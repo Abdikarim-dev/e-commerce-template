@@ -1,14 +1,14 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
-import FeaturedProducts from "../components/FeaturedProducts";
+import Features from "../components/Features";
 
 const HomePage = () => {
   return (
     <div>
       <Header />
       <Banner />
-      <FeaturedProducts />
+      <Features />
       <Footer />
     </div>
   );
