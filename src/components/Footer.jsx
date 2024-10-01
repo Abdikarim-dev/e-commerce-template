@@ -5,7 +5,7 @@ import { TiSocialLinkedin } from "react-icons/ti";
 
 const Footer = () => {
   return (
-    <div className="bg-black  flex justify-center gap-20 px-[15px] pt-[80px] pb-[60px] text-white font-poppins">
+    <div className="bg-black flex justify-between px-[135px] pt-[80px] pb-[60px] text-white font-poppins">
       {/* Exclusive Info */}
       <div className="flex flex-col gap-4">
         <h2 className="text-2xl  font-bold pb-2">Exclusive</h2>
