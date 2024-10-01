@@ -7,6 +7,13 @@ const currentMonth = [
     discountPrice: "$260",
     image: "./features/hoodie.svg",
     rating: 86,
+    stars: [
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+    ],
   },
   {
     title: "Gucci duffle bag",
@@ -14,6 +21,13 @@ const currentMonth = [
     discountPrice: "$960",
     image: "./features/gucci bag.svg",
     rating: 77,
+    stars: [
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+      "text-gray-300",
+    ],
   },
   {
     title: "RGB liquid CPU Cooler",
@@ -21,6 +35,13 @@ const currentMonth = [
     discountPrice: "$160",
     image: "./features/cooler.svg",
     rating: 188,
+    stars: [
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+    ],
   },
   {
     title: "Small BookSelf",
@@ -28,6 +49,13 @@ const currentMonth = [
     // discountPrice: "$260",
     image: "./features/bookshelf.svg",
     rating: 401,
+    stars: [
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+      "text-[#FFAD33]",
+    ],
   },
 ];
 const FeaturedInThisMonth = () => {

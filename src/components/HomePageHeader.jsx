@@ -5,12 +5,12 @@ const HomePageHeader = ({ name, title, discountSales, isMonthComponent }) => {
       {/* Title */}
       <div className="flex gap-2.5 items-center pb-4">
         <div className="w-5 h-10 bg-[#DB4444] rounded"></div>
-        <h2 className="font-semibold text-[#db4444]">{name}</h2>//Today’s
+        <h2 className="font-semibold text-[#db4444]">{name}</h2>
       </div>
       {/* Main Header */}
       <div className="flex justify-between items-center">
         {/* title */}
-        <h2 className="text-4xl font-semibold pb-6">{title}</h2> // New Arrival
+        <h2 className="text-4xl font-semibold pb-6">{title}</h2> 
         {/* Counter */}
         {discountSales && (
           <div className="flex gap-4 pb-6">

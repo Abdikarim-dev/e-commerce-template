@@ -1,9 +1,9 @@
 import { FaRegHeart, FaStar } from "react-icons/fa6";
 
 import { LuEye } from "react-icons/lu";
-const HomepageMain = ({ products }) => {
+const HomepageMain = ({ products, changeStarsPosition }) => {
   return (
-    <main className="flex justify-between gap-7">
+    <main className="grid grid-cols-4 justify-between gap-7">
       {products?.map((product) => (
         <div key={product.id} className="flex flex-col gap-2">
           <div className="relative w-[300px] h-[250px] bg-[#f5f5f5] flex items-center justify-center mb-2">
@@ -21,20 +21,46 @@ const HomepageMain = ({ products }) => {
             <img src={product.image} alt="" />
           </div>
           <p>{product.title}</p>
-          <small className="flex gap-3 items-center">
+          <small className="flex items-center">
             <span className="font-medium text-[#db4444]">
               {product.discountPrice}
             </span>
             <span className="line-through text-gray-400">
               {product.oldPrice}
             </span>
+            {changeStarsPosition && (
+              <div className="ml-3 flex gap-[2px] items-center">
+                {product.stars?.map((star, index) => (
+                  <FaStar key={index} className={`${star}`} />
+                ))}
+                <span>({product.rating})</span>
+              </div>
+            )}
           </small>
           {/* reviews */}
-          <div className="flex gap-[2px] items-center">
-            {product.stars?.map((star, index) => (
-              <FaStar key={index} className={`${star}`} />
+          {!changeStarsPosition && (
+            <div className="flex gap-[2px] items-center">
+              {product.stars?.map((star, index) => (
+                <FaStar key={index} className={`${star}`} />
+              ))}
+              <span>({product.rating})</span>
+            </div>
+          )}
+          {/* Colors of the radio boxes */}
+          <div className="flex space-x-4 mt-2">
+            {product.colors?.map((color, index) => (
+              <label key={index}>
+                <input
+                  type="radio"
+                  name={`color-${product.id}`} // Add a name attribute that groups radio buttons by product
+                  className={`
+          checked:ring-2 checked:ring-black 
+          appearance-none w-6 h-6 border-2 
+          rounded-full cursor-pointer`}
+                  style={{ backgroundColor: color, borderColor: color }} // Use inline style for dynamic color
+                />
+              </label>
             ))}
-            <span>({product.rating})</span>
           </div>
         </div>
       ))}
@@ -47,4 +73,3 @@ export default HomepageMain;
 // todays sales -- object
 // this month sales
 // all products sales
-
