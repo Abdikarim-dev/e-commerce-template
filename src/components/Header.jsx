@@ -49,10 +49,12 @@ const Header = () => {
         </div>
 
         <div className="relative">
-          <FaRegHeart className="cursor-pointer" size={"26"} />
-          <div className="absolute cursor-pointer bottom-3 left-3 bg-[#DB4444] text-white w-6 h-6 flex justify-center items-center rounded-full p-2">
-            <small className="font-bold">2</small>
-          </div>
+          <NavLink className={"cursor-pointer"} to={"/wishlist"}>
+            <FaRegHeart size={"26"} />
+            <div className="absolute cursor-pointer bottom-3 left-3 bg-[#DB4444] text-white w-6 h-6 flex justify-center items-center rounded-full p-2">
+              <small className="font-bold">2</small>
+            </div>
+          </NavLink>
         </div>
 
         <div className="relative">
